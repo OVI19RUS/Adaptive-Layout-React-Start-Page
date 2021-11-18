@@ -1,0 +1,189 @@
+@import "../fonts";
+$margin: 40px;
+
+.content {
+    display: flex;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.content--left {width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    font-size: 16px;
+}
+
+#circle--small-blue {
+  width: 13em;
+  height: 13em;
+  background: #78D4FC;
+  border-radius: 50%;
+}
+
+#circle--big-purple {
+  width: 22em;
+  height: 22em;
+  background: #7338F6;
+  border-radius: 50%;
+  margin-bottom: -$margin;
+  margin-left: calc(#{$margin} / 2);
+}
+
+#circle--big-blue {
+    width: 24.5em;
+    height: 24.5em;
+    background: #78D4FC;
+    border-radius: 50%;
+  }
+  
+  #circle--small-purple {
+    width: 12em;
+    height: 12em;
+    background: #7338F6;
+    border-radius: 50%;
+    align-self: flex-start;
+    margin-top: $margin;
+    margin-left: calc(#{$margin} / 4);}
+
+
+.content--right{
+    width: 50%;
+}
+
+.content--label {
+    line-height: 0.7;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.content--input {
+    line-height: 0.7;
+}
+
+label {font-size: 14px;
+ &.label--email{
+     color:#A5A3A4 ;
+ }
+}
+
+#email--input {
+    width: 20rem;
+    border:none;
+    border-top: 2px solid #E7E7E7;
+}
+
+.email--error--detection{
+    color: red;
+    margin-left: 1em;
+}
+
+.email--accept{
+  color: black;
+}
+
+.label--checkbox {
+    display: block;
+    position: relative;
+    padding-left: 32px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.label--checkbox input{
+    position: absolute;
+    opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border: 2px solid #E7E7E7;
+    border-radius: 5px;
+  }
+
+  .label--checkbox input:checked ~ .checkmark {
+    background: linear-gradient(180deg, #7C45F8 0%, #746FFA 79.33%, #6D90FB 100%);
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .label--checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .label--checkbox .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.content--btn {
+    margin-top: 1rem;
+    width: 10rem;
+    height: 3.5rem;
+    text-transform: uppercase;
+    font-family: $jost;
+    font-size: 12px;
+    background: linear-gradient(180deg, #7C45F8 0%, #746FFA 79.33%, #6D90FB 100%);
+    border-radius: 8px;
+    border: none;
+    &.active{cursor: pointer;}
+    &.active::after {
+        color: white;
+    }
+}
+
+.content--btn::after{
+    content: 'enter';
+    color: #A5A3A4;
+}
+
+@media (max-width:1260px){
+  .content--left {font-size: 14px;
+}
+}
+
+@media (max-width:1100px){
+  .content--left {font-size: 12px;
+}
+}
+
+@media (max-width:950px){
+  .content--left {font-size: 10px;
+}
+}
+
+@media (max-width:840px){
+  .content--left {display: none;
+}
+
+.content--right{
+  width: 100%;
+}
+
+.content--label{
+  font-size: 18px;
+  text-align: center;
+  line-height: 0.9;
+}
+}

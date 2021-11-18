@@ -1,0 +1,22 @@
+@import 'fonts';
+@import 'components/all';
+
+body {
+    font-family: $jost;
+    margin: 0;
+}
+
+main {max-width: 1440px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+a {
+    color: #6542F3;
+}
+
+@media (max-width:830px){
+main {
+    width: 90%;
+}
+}
